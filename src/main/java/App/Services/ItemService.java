@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Services;
+package App.Services;
 
-import Exceptions.RecordNotFoundException;
-import Model.Item;
-import Repositories.ItemRepository;
+import App.Exceptions.RecordNotFoundException;
+import App.Model.Item;
+import App.Repositories.ItemRepository;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -20,10 +20,11 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class ItemService {
+     
     @Autowired
     ItemRepository repository;
-    
-     public List<Item> getAllItems()
+     
+    public List<Item> getAllItems()
     {
         List<Item> itemList = repository.findAll();
          
@@ -85,5 +86,5 @@ public class ItemService {
         }
     }
 
-  
+    
 }

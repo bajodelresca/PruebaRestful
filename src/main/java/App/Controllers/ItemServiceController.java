@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controllers;
+package App.Controllers;
 
-import Exceptions.RecordNotFoundException;
-import Model.Item;
-import Services.ItemService;
+import App.Exceptions.RecordNotFoundException;
+import App.Model.Item;
+import App.Services.ItemService;
 import java.util.List;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,7 +49,7 @@ public class ItemServiceController
         return new ResponseEntity<Item>(entity, new HttpHeaders(), HttpStatus.OK);
     }
     
-   
+    
  
    @PostMapping
     public ResponseEntity<Item> createItem(@Valid @RequestBody Item myItem){
@@ -70,5 +70,6 @@ public class ItemServiceController
         service.deleteItemById(id);
         return HttpStatus.ACCEPTED;
     }
+ 
 }
  

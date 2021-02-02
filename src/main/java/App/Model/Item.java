@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Model;
+package App.Model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -58,4 +58,5 @@ public class Item {
         return "Item{" + "id=" + id + ", title=" + title + ", description=" + description + '}';
     }
 }
+
 
